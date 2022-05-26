@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurant/widget/ratingBuilder.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 // ignore: must_be_immutable
 class homePage extends StatefulWidget {
@@ -210,19 +210,23 @@ class _homePageState extends State<homePage> {
                                             children: [
                                               Container(
                                                 decoration: BoxDecoration(
-                                                  color: Colors.grey.shade100,
-                                                  borderRadius: BorderRadius.circular(5)
-                                                ),
+                                                    color: Colors.grey.shade100,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            5)),
                                                 margin:
-                                                    EdgeInsetsDirectional.all(3),
+                                                    EdgeInsetsDirectional.all(
+                                                        3),
                                                 child: Container(
                                                   margin:
-                                                  EdgeInsetsDirectional.all(3),
+                                                      EdgeInsetsDirectional.all(
+                                                          3),
                                                   child: Card(
                                                     color: Colors.grey,
                                                     child: ClipRRect(
                                                         borderRadius:
-                                                            BorderRadius.circular(10),
+                                                            BorderRadius
+                                                                .circular(10),
                                                         child: Image.asset(
                                                             'images/burgeroffer.jpg')),
                                                   ),
@@ -251,12 +255,19 @@ class _homePageState extends State<homePage> {
                                             ),
                                             Text(
                                               'Mc Donald, New Yourk, USA',
-                                              style: TextStyle(color: Colors.grey),
+                                              style:
+                                                  TextStyle(color: Colors.grey),
                                             ),
-                                            Text('Helo'),
+                                            Row(
+                                              children: [
+                                                ooClass(),
+                                                SizedBox(width: 5),
+                                              ],
+                                            ),
                                             Row(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.center,
                                               children: [
@@ -266,7 +277,8 @@ class _homePageState extends State<homePage> {
                                                       '\$5',
                                                       style: TextStyle(
                                                         fontSize: 14,
-                                                        fontWeight: FontWeight.bold,
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
                                                     ),
                                                     SizedBox(
@@ -276,14 +288,15 @@ class _homePageState extends State<homePage> {
                                                       '\$10',
                                                       style: TextStyle(
                                                         decoration:
-                                                        TextDecoration.lineThrough,
+                                                            TextDecoration
+                                                                .lineThrough,
                                                         fontSize: 14,
-                                                        fontWeight: FontWeight.bold,
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
                                                     ),
                                                   ],
                                                 ),
-
                                                 Row(
                                                   children: [
                                                     Icon(Icons.add),
@@ -321,4 +334,16 @@ class _homePageState extends State<homePage> {
 
   Widget buildIndicator() =>
       AnimatedSmoothIndicator(activeIndex: activeIndex, count: imglist.length);
+
+  // Widget starRating() => RatingBar.builder(
+  //     updateOnDrag: true,
+  //     minRating: 1,
+  //     itemSize: 13,
+  //     itemBuilder: (context, _) =>
+  //         Icon(Icons.star, color: Colors.amber),
+  //     onRatingUpdate: (rating) {
+  //       setState(() {
+  //         this.rating = rating;
+  //       });
+  //     });
 }
