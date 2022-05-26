@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 // ignore: must_be_immutable
 class homePage extends StatefulWidget {
@@ -15,11 +16,11 @@ class _homePageState extends State<homePage> {
   int activeIndex = 0;
 
   final imglist = [
-    'images/restro1.jpg',
-    'images/restro1.jpg',
-    'images/restro1.jpg',
-    'images/restro1.jpg',
-    'images/restro1.jpg',
+    'images/restro2.jpg',
+    'images/restro2.jpg',
+    'images/restro2.jpg',
+    'images/restro2.jpg',
+    'images/restro2.jpg',
   ];
   final categoryname = [
     'Tea',
@@ -102,14 +103,15 @@ class _homePageState extends State<homePage> {
                         return buildImage(img, index);
                       },
                       options: CarouselOptions(
-                        height: 120,
+                        viewportFraction: 0.8,
+                        height: 155,
                         pageSnapping: false,
                         enableInfiniteScroll: true,
                         onPageChanged: (index, reason) =>
                             setState(() => activeIndex = index),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 5),
                     buildIndicator(),
                   ],
                 ),
@@ -188,63 +190,116 @@ class _homePageState extends State<homePage> {
                       scrollDirection: Axis.horizontal,
                       itemCount: 10,
                       itemBuilder: (context, index) {
-                        return Card(
-                          child: Flexible(
-                            flex: 1,
-                            child: Container(
-                              margin: EdgeInsetsDirectional.only(end: 15),
-                              height: 100,
-                              width: 300,
-                              child: Row(
-                                children: [
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        height: 100,
-                                        width: 100,
+                        return Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Card(
+                              child: Container(
+                                margin: EdgeInsetsDirectional.only(end: 15),
+                                height: 100,
+                                width: 300,
+                                child: Row(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Container(
+                                          height: 100,
+                                          width: 100,
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Colors.grey.shade100,
+                                                  borderRadius: BorderRadius.circular(5)
+                                                ),
+                                                margin:
+                                                    EdgeInsetsDirectional.all(3),
+                                                child: Container(
+                                                  margin:
+                                                  EdgeInsetsDirectional.all(3),
+                                                  child: Card(
+                                                    color: Colors.grey,
+                                                    child: ClipRRect(
+                                                        borderRadius:
+                                                            BorderRadius.circular(10),
+                                                        child: Image.asset(
+                                                            'images/burgeroffer.jpg')),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                        padding: EdgeInsetsDirectional.all(7),
                                         child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Container(
-                                              padding: EdgeInsetsDirectional.all(5),
-                                              child: ClipRRect(
-                                                  borderRadius: BorderRadius.circular(10),
-                                                  child: Image.asset('images/burgeroffer.jpg')),
+                                            Text(
+                                              'Burger',
+                                              style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            Text(
+                                              'Mc Donald, New Yourk, USA',
+                                              style: TextStyle(color: Colors.grey),
+                                            ),
+                                            Text('Helo'),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceBetween,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      '\$5',
+                                                      style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 10,
+                                                    ),
+                                                    Text(
+                                                      '\$10',
+                                                      style: TextStyle(
+                                                        decoration:
+                                                        TextDecoration.lineThrough,
+                                                        fontSize: 14,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+
+                                                Row(
+                                                  children: [
+                                                    Icon(Icons.add),
+                                                  ],
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                  Flexible(
-                                    child: Container(
-                                      padding: EdgeInsetsDirectional.all( 7),
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text('Burger',style: TextStyle(
-                                            fontSize: 18, fontWeight: FontWeight.bold,
-                                          ),),
-                                          Text('Mc Donald, New Yourk, USA', style: TextStyle(
-                                            color: Colors.grey
-                                          ),),
-                                          Text('Helo'),
-                                          Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text('tk - 55'),
-                                              Icon(Icons.add),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
+                          ],
                         );
                       }),
                 ),
@@ -255,11 +310,12 @@ class _homePageState extends State<homePage> {
       ),
     );
   }
+
   Widget buildImage(String img, int index) {
     return Container(
-      padding: EdgeInsetsDirectional.only(start: 5, end: 5),
+      margin: EdgeInsetsDirectional.only(start: 5, end: 5),
       child: ClipRRect(
-          borderRadius: BorderRadius.circular(15), child: Image.asset(img)),
+          borderRadius: BorderRadius.circular(12), child: Image.asset(img)),
     );
   }
 
