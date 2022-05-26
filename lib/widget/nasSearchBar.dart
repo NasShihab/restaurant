@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class searchBar extends StatefulWidget {
-  const searchBar({Key? key}) : super(key: key);
+class nasSearchBar extends StatefulWidget {
+  const nasSearchBar({Key? key}) : super(key: key);
 
   @override
-  State<searchBar> createState() => _searchBarState();
+  State<nasSearchBar> createState() => _nasSearchBarState();
 }
 
-class _searchBarState extends State<searchBar> {
+class _nasSearchBarState extends State<nasSearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
