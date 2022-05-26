@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant/widget/ratingBuilder.dart';
+import 'package:restaurant/widget/searchBar.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 // ignore: must_be_immutable
@@ -82,15 +83,16 @@ class _homePageState extends State<homePage> {
                   ),
                 ),
                 SizedBox(height: 10),
+                searchBar(),
                 // 2. Search Bar
-                Container(
-                  margin: EdgeInsetsDirectional.only(start: 15, end: 15),
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                    color: Colors.green,
-                  )),
-                  child: CupertinoSearchTextField(),
-                ),
+                // Container(
+                //   margin: EdgeInsetsDirectional.only(start: 15, end: 15),
+                //   decoration: BoxDecoration(
+                //       border: Border.all(
+                //     color: Colors.green,
+                //   )),
+                //   child: CupertinoSearchTextField(),
+                // ),
                 SizedBox(height: 10),
                 // 3. poster
                 Column(
