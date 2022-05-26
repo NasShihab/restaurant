@@ -91,7 +91,7 @@ class _homePageState extends State<homePage> {
                   child: CupertinoSearchTextField(),
                 ),
                 SizedBox(height: 10),
-                // 3. Poster
+                // 3. poster
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -255,7 +255,6 @@ class _homePageState extends State<homePage> {
       ),
     );
   }
-
   Widget buildImage(String img, int index) {
     return Container(
       padding: EdgeInsetsDirectional.only(start: 5, end: 5),
