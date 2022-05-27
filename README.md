@@ -6,7 +6,6 @@ Here is demo
 ScreenShot
 <img src="https://drive.google.com/uc?export=view&id=1K-5WN8R5SthD3Kye87d50hgpYocgPZ2L" width="200" height="500">
 <img src="https://drive.google.com/uc?export=view&id=1JzA7KGGLMYXJ-69TOcZKKHDXGyLx208O" width="200" height="500">
-<img src="https://drive.google.com/uc?export=view&id=1JzA7KGGLMYXJ-69TOcZKKHDXGyLx208O" width="200" height="500">
 
 Demo Video
 https://drive.google.com/file/d/1Jp76XIQ5iSqV4i-m69Oc11jaOExlxIvW/view
