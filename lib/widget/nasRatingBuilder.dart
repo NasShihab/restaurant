@@ -24,7 +24,7 @@ class _nasRatingBuilderState extends State<nasRatingBuilder> {
   Widget starRating() => RatingBar.builder(
       updateOnDrag: true,
       minRating: 1,
-      itemSize: 13,
+      itemSize: 17,
       itemBuilder: (context, _) => Icon(Icons.star, color: Colors.amber),
       onRatingUpdate: (rating) {
         setState(() {

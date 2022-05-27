@@ -44,18 +44,31 @@ class _nasCategoryListState extends State<nasCategoryList> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            Container(
-              margin: EdgeInsetsDirectional.only(start: 10),
-              child: Text(
-                'Category',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 20),
+        Container(
+          margin: EdgeInsetsDirectional.only(end: 5),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              // 200+ Near around
+              Container(
+                padding: EdgeInsetsDirectional.only(start: 10),
+                child: Text(
+                  'Category',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               ),
-            ),
-          ],
+              Text(
+                'View All',
+                style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.amber),
+              ),
+            ],
+          ),
         ),
+        SizedBox(height: 10),
         Container(
           margin: EdgeInsetsDirectional.only(start: 15),
           height: 90,

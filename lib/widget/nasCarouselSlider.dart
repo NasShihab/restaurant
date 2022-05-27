@@ -14,11 +14,11 @@ class _nasCarouselSliderState extends State<nasCarouselSlider> {
   int activeIndex = 0;
 
   final imglist = [
-    'images/restro2.jpg',
-    'images/restro2.jpg',
-    'images/restro2.jpg',
-    'images/restro2.jpg',
-    'images/restro2.jpg',
+    'images/restro1.jpg',
+    'images/restro1.jpg',
+    'images/restro1.jpg',
+    'images/restro1.jpg',
+    'images/restro1.jpg',
   ];
   final categoryname = [
     'Tea',
@@ -60,7 +60,7 @@ class _nasCarouselSliderState extends State<nasCarouselSlider> {
               },
               options: CarouselOptions(
                 viewportFraction: 0.8,
-                height: 155,
+                height: 110,
                 pageSnapping: false,
                 enableInfiniteScroll: true,
                 onPageChanged: (index, reason) =>
@@ -76,10 +76,11 @@ class _nasCarouselSliderState extends State<nasCarouselSlider> {
   }
 
   Widget buildImage(String img, int index) {
-    return Container(
-      margin: EdgeInsetsDirectional.only(start: 5, end: 5),
-      child: ClipRRect(
-          borderRadius: BorderRadius.circular(12), child: Image.asset(img)),
+    return ClipRRect(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+      child: Container(
+        child: Image.asset(img, fit: BoxFit.cover,),
+      ),
     );
   }
 

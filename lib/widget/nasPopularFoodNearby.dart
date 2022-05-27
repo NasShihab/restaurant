@@ -14,17 +14,30 @@ class _nasPopularFoodNearbyState extends State<nasPopularFoodNearby> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            Container(
-              margin: EdgeInsetsDirectional.only(start: 10),
-              child: Text(
-                'Popular Food Nearby',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 20),
+        // Text
+        Container(
+          margin: EdgeInsetsDirectional.only(end: 5),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              // 200+ Near around
+              Container(
+                padding: EdgeInsetsDirectional.only(start: 10),
+                child: Text(
+                  'Popular Food Nearby',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               ),
-            ),
-          ],
+              Text(
+                'View All',
+                style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.amber),
+              ),
+            ],
+          ),
         ),
         SizedBox(height: 10),
         // Popular Food er name price etc
@@ -68,6 +81,7 @@ class _nasPopularFoodNearbyState extends State<nasPopularFoodNearby> {
                                           EdgeInsetsDirectional.all(
                                               3),
                                           child: Card(
+                                            elevation: 8,
                                             color: Colors.grey,
                                             child: ClipRRect(
                                                 borderRadius:

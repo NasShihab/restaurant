@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant/widget/nasFoodCampaign.dart';
 import 'package:restaurant/widget/nasCarouselSlider.dart';
 import 'package:restaurant/widget/nasCategoryList.dart';
 import 'package:restaurant/widget/nasPopularFoodNearby.dart';
 import 'package:restaurant/widget/nasSearchBar.dart';
+import 'package:restaurant/widget/nas_All_Restaurants.dart';
+import 'package:restaurant/widget/nas_Popular_Restaurant.dart';
 
 // ignore: must_be_immutable
 class homePage extends StatefulWidget {
@@ -59,6 +62,16 @@ class _homePageState extends State<homePage> {
                 SizedBox(height: 10),
                 //Text - - Popular Food Nearby
                 nasPopularFoodNearby(),
+                SizedBox(height: 20),
+                // Food Campaign
+                nasFoodCampaign(),
+                SizedBox(height: 20),
+                //Popular Restaurant
+                nas_Popular_Restaurant(),
+                SizedBox(height: 20),
+                // Text All Restaurants
+                nas_All_Restaurants(),
+                SizedBox(height: 200),
               ],
             ),
           ),
