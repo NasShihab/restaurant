@@ -44,7 +44,6 @@ class _nasCarouselSliderState extends State<nasCarouselSlider> {
     'images/cake.png',
     'images/vanilla.png',
   ];
-
   @override
   Widget build(BuildContext context) {
     return Column(
