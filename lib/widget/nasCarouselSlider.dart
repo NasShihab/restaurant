@@ -59,7 +59,6 @@ class _nasCarouselSliderState extends State<nasCarouselSlider> {
                 return buildImage(img, index);
               },
               options: CarouselOptions(
-                viewportFraction: 0.8,
                 height: 110,
                 pageSnapping: false,
                 enableInfiniteScroll: true,
@@ -76,9 +75,10 @@ class _nasCarouselSliderState extends State<nasCarouselSlider> {
   }
 
   Widget buildImage(String img, int index) {
-    return ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(15)),
-      child: Container(
+    return Container(
+      padding: EdgeInsetsDirectional.only(start: 5, end: 5),
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(15)),
         child: Image.asset(img, fit: BoxFit.cover,),
       ),
     );
