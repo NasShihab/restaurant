@@ -1,10 +1,12 @@
 # restaurant
 
-A new Flutter project.
+A Online Restaurant shop app
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Here is demo screenshot    
+
+<img src="https://drive.google.com/uc?export=view&id=1Jp76XIQ5iSqV4i-m69Oc11jaOExlxIvW" width="200" height="500">
 
 A few resources to get you started if this is your first Flutter project:
 
