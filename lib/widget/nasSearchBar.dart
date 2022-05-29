@@ -15,7 +15,7 @@ class _nasSearchBarState extends State<nasSearchBar> {
       padding: EdgeInsetsDirectional.only(start: 10, end: 10),
       child: CupertinoSearchTextField(
         decoration: BoxDecoration(border: Border.all(color: Colors.green)),
-        placeholder: 'Nas Shihab s',
+        placeholder: 'Nas Shihab',
         suffixMode: OverlayVisibilityMode.always,
         suffixIcon: Icon(CupertinoIcons.search),
       ),
