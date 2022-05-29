@@ -15,7 +15,7 @@ class _nasSearchBarState extends State<nasSearchBar> {
       padding: EdgeInsetsDirectional.only(start: 10, end: 10),
       child: CupertinoTextField(
         decoration: BoxDecoration(border: Border.all(color: Colors.green)),
-        placeholder: 'Bijoy Search  12 3424 34 45 45 ',
+        placeholder: 'Bijoy Search',
         suffix: Icon(CupertinoIcons.search),
       ),
     );
