@@ -12,12 +12,13 @@ class _nasSearchBarState extends State<nasSearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-          margin: EdgeInsetsDirectional.only(start: 15, end: 15),
-          decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.green,
-              )),
-          child: CupertinoSearchTextField(),
-        );
+      padding: EdgeInsetsDirectional.only(start: 10, end: 10),
+      child: CupertinoSearchTextField(
+        decoration: BoxDecoration(border: Border.all(color: Colors.green)),
+        placeholder: 'Nas Shihab',
+        suffixMode: OverlayVisibilityMode.always,
+        suffixIcon: Icon(CupertinoIcons.search),
+      ),
+    );
   }
 }
